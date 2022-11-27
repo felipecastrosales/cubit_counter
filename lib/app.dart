@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 
-class App extends StatelessWidget {
-  const App({super.key});
+import 'counter/counter.dart';
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Cubit Counter',
-      // home: CounterPage(),
-      home: Container(),
-    );
-  }
+class CounterApp extends MaterialApp {
+  const CounterApp({super.key}) : super(home: const CounterPage());
 }
