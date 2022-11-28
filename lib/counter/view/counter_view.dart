@@ -30,13 +30,13 @@ class CounterView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           FloatingActionButton(
-            key: const Key('counter_cubit_a'),
+            key: const Key('counter_cubit_increment'),
             child: const Icon(Icons.add),
             onPressed: () => context.read<CounterCubit>().increment(),
           ),
           const SizedBox(height: 8),
           FloatingActionButton(
-            key: const Key('counter_cubit_b'),
+            key: const Key('counter_cubit_decrement'),
             child: const Icon(Icons.remove),
             onPressed: () => context.read<CounterCubit>().decrement(),
           ),

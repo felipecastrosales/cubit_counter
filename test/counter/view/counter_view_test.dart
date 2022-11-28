@@ -19,7 +19,7 @@ void main() {
 
   group('CounterView', () {
     testWidgets('renders current CounterCubit state', (tester) async {
-      when(() => counterCubit.state).thenReturn(42);
+      when(() => counterCubit.state).thenReturn(0);
       await tester.pumpWidget(
         MaterialApp(
           home: BlocProvider.value(
@@ -28,7 +28,7 @@ void main() {
           ),
         ),
       );
-      expect(find.text('42'), findsOneWidget);
+      expect(find.text('0'), findsOneWidget);
     });
 
     testWidgets('tapping increment button invokes increment', (tester) async {
